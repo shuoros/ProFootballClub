@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180036",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "cup_board",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "level",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "12",
+      "fieldValidateRulesMin": "1"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "CupBoard",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "match",
+      "otherEntityRelationshipName": "cupBoard",
+      "relationshipName": "match",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cup",
+      "otherEntityRelationshipName": "cupBoard",
+      "relationshipName": "cup",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

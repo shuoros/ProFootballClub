@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "ticket": {
+      "home": {
+        "title": "Tickets",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Ticket",
+        "createOrEditLabel": "Genera o modifica un Ticket",
+        "notFound": "No Tickets found"
+      },
+      "created": "&Egrave; stato generato un nuovo Ticket con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Ticket identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Ticket con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Ticket {{ id }}?"
+      },
+      "detail": {
+        "title": "Ticket"
+      },
+      "id": "Id",
+      "subject": "Subject",
+      "coach": "Coach",
+      "messages": "Messages"
+    }
+  }
+}

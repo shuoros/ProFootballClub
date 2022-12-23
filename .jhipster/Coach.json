@@ -1,0 +1,60 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180024",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "coach",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "banned",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "abandoned",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "subscribed",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "plan",
+      "fieldType": "Plan",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SIMPLE,PREMIUM"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Coach",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "coach",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "coach",
+      "relationshipName": "team",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

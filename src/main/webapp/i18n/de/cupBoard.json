@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "cupBoard": {
+      "home": {
+        "title": "Cup Boards",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Cup Board erstellen",
+        "createOrEditLabel": "Cup Board erstellen oder bearbeiten",
+        "notFound": "Keine Cup Boards gefunden"
+      },
+      "created": "Cup Board erstellt mit ID {{ param }}",
+      "updated": "Cup Board aktualisiert mit ID {{ param }}",
+      "deleted": "Cup Board gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Cup Board {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Cup Board"
+      },
+      "id": "Id",
+      "level": "Level",
+      "match": "Match",
+      "cup": "Cup"
+    }
+  }
+}

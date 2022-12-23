@@ -1,0 +1,77 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180030",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "composition",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "d3fault",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "arrange",
+      "fieldType": "Arrange",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "A235,A442,A451,A433,A352,A4231,A4141,A4411,A343,A3331,A4312,A4222"
+    },
+    {
+      "fieldName": "strategy",
+      "fieldType": "Strategy",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "GET_SCORE,NOT_GIVE_SCORE,COUNTER_ATTACK,KILL_TIME"
+    },
+    {
+      "fieldName": "defence",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "100",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "shortPass",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "100",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "violence",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "100",
+      "fieldValidateRulesMin": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Composition",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "player",
+      "ownerSide": true,
+      "relationshipName": "capitan",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "playerArrange",
+      "otherEntityRelationshipName": "composition",
+      "relationshipName": "playerArranges",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "composition",
+      "relationshipName": "team",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

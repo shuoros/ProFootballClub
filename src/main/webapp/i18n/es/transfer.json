@@ -1,0 +1,27 @@
+{
+  "proFootballClubApp": {
+    "transfer": {
+      "home": {
+        "title": "Transfers",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Transfer",
+        "createOrEditLabel": "Crear o editar Transfer",
+        "notFound": "Ningún Transfers encontrado"
+      },
+      "created": "Un nuevo Transfer ha sido creado con el identificador {{ param }}",
+      "updated": "Un Transfer ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Transfer ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Transfer {{ id }}?"
+      },
+      "detail": {
+        "title": "Transfer"
+      },
+      "id": "Id",
+      "price": "Price",
+      "password": "Password",
+      "bought": "Bought",
+      "player": "Player"
+    }
+  }
+}

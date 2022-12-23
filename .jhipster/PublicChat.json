@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180041",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "public_chat",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PublicChat",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "ownerSide": true,
+      "relationshipName": "from",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "team",
+      "ownerSide": true,
+      "relationshipName": "tu",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "message",
+      "otherEntityRelationshipName": "publicChat",
+      "relationshipName": "message",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,61 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180034",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "league_board",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "position",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "8",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "fieldName": "win",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lose",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "draw",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "goalDifference",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "points",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "LeagueBoard",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "leagueBoard",
+      "ownerSide": true,
+      "relationshipName": "team",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "league",
+      "otherEntityRelationshipName": "leagueBoard",
+      "relationshipName": "league",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

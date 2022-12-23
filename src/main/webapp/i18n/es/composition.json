@@ -1,0 +1,32 @@
+{
+  "proFootballClubApp": {
+    "composition": {
+      "home": {
+        "title": "Compositions",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Composition",
+        "createOrEditLabel": "Crear o editar Composition",
+        "notFound": "Ningún Compositions encontrado"
+      },
+      "created": "Un nuevo Composition ha sido creado con el identificador {{ param }}",
+      "updated": "Un Composition ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Composition ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Composition {{ id }}?"
+      },
+      "detail": {
+        "title": "Composition"
+      },
+      "id": "Id",
+      "d3fault": "D 3 Fault",
+      "arrange": "Arrange",
+      "strategy": "Strategy",
+      "defence": "Defence",
+      "shortPass": "Short Pass",
+      "violence": "Violence",
+      "capitan": "Capitan",
+      "playerArranges": "Player Arranges",
+      "team": "Team"
+    }
+  }
+}

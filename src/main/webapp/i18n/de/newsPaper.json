@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "newsPaper": {
+      "home": {
+        "title": "News Papers",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "News Paper erstellen",
+        "createOrEditLabel": "News Paper erstellen oder bearbeiten",
+        "notFound": "Keine News Papers gefunden"
+      },
+      "created": "News Paper erstellt mit ID {{ param }}",
+      "updated": "News Paper aktualisiert mit ID {{ param }}",
+      "deleted": "News Paper gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll News Paper {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "News Paper"
+      },
+      "id": "Id",
+      "news": "News",
+      "league": "League",
+      "cup": "Cup"
+    }
+  }
+}

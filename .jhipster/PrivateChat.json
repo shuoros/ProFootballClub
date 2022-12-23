@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180040",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "private_chat",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PrivateChat",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "league",
+      "ownerSide": true,
+      "relationshipName": "league",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "cup",
+      "ownerSide": true,
+      "relationshipName": "cup",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "message",
+      "otherEntityRelationshipName": "privateChat",
+      "relationshipName": "message",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

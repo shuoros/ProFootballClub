@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "train": {
+      "home": {
+        "title": "Trains",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Train",
+        "createOrEditLabel": "Crear o editar Train",
+        "notFound": "Ningún Trains encontrado"
+      },
+      "created": "Un nuevo Train ha sido creado con el identificador {{ param }}",
+      "updated": "Un Train ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Train ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Train {{ id }}?"
+      },
+      "detail": {
+        "title": "Train"
+      },
+      "id": "Id",
+      "training": "Training",
+      "finishes": "Finishes",
+      "player": "Player"
+    }
+  }
+}

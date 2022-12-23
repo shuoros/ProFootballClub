@@ -1,0 +1,128 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180025",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "team",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "homeland",
+      "fieldType": "Country",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "MULTY_CULTI,UK,US,DE,IR"
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "Gender",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "DIVERSE,MALE,FEMALE"
+    },
+    {
+      "fieldName": "money",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "points",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "matches",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "trophies",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "readiness",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "100",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "spirit",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "100",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "fans",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fansSatisfaction",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "100",
+      "fieldValidateRulesMin": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Team",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "stadium",
+      "otherEntityRelationshipName": "team",
+      "ownerSide": true,
+      "relationshipName": "stadium",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "player",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "player",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "composition",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "composition",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "friends",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "leagueBoard",
+      "otherEntityRelationshipName": "team",
+      "ownerSide": false,
+      "relationshipName": "leagueBoard",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "coach",
+      "otherEntityRelationshipName": "team",
+      "relationshipName": "coach",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "friends",
+      "relationshipName": "team",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

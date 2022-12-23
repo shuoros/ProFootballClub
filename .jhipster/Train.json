@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180028",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "train",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "training",
+      "fieldType": "Training",
+      "fieldValues": "GOALKEEPING,PENALTY_DEFENCE,DEFENCE,TACKLING,BALL_KEEPING,TEAMWORK,PASS,CORNER_KICK,FREE_KICK,PENALTY_KICK,GOAL,TECHNIQUE"
+    },
+    {
+      "fieldName": "finishes",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Train",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "player",
+      "ownerSide": true,
+      "relationshipName": "player",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

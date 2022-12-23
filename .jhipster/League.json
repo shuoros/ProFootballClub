@@ -1,0 +1,65 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180033",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "league",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "clazz",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "14",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "fieldName": "events",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "finished",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "start",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "League",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "player",
+      "ownerSide": true,
+      "relationshipName": "goalScorer",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "newsPaper",
+      "otherEntityRelationshipName": "league",
+      "ownerSide": true,
+      "relationshipName": "newsPaper",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "match",
+      "otherEntityRelationshipName": "league",
+      "relationshipName": "match",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "leagueBoard",
+      "otherEntityRelationshipName": "league",
+      "relationshipName": "leagueBoard",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

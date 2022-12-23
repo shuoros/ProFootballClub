@@ -1,0 +1,31 @@
+{
+  "proFootballClubApp": {
+    "cup": {
+      "home": {
+        "title": "Cups",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Cup",
+        "createOrEditLabel": "Créer ou éditer un Cup",
+        "notFound": "Aucun Cup trouvé"
+      },
+      "created": "Un nouveau Cup a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Cup avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Cup avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Cup {{ id }} ?"
+      },
+      "detail": {
+        "title": "Cup"
+      },
+      "id": "Id",
+      "type": "Type",
+      "events": "Events",
+      "finished": "Finished",
+      "entrance": "Entrance",
+      "start": "Start",
+      "goalScorer": "Goal Scorer",
+      "newsPaper": "News Paper",
+      "cupBoard": "Cup Board"
+    }
+  }
+}

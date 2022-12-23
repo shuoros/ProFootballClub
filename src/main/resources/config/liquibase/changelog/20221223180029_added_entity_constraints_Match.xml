@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Match.
+    -->
+    <changeSet id="20221223180029-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="host_id"
+                                 baseTableName="jhi_match"
+                                 constraintName="fk_jhi_match__host_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="team"/>
+
+        <addForeignKeyConstraint baseColumnNames="guest_id"
+                                 baseTableName="jhi_match"
+                                 constraintName="fk_jhi_match__guest_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="team"/>
+
+        <addForeignKeyConstraint baseColumnNames="host_composition_id"
+                                 baseTableName="jhi_match"
+                                 constraintName="fk_jhi_match__host_composition_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="composition"/>
+
+        <addForeignKeyConstraint baseColumnNames="guest_composition_id"
+                                 baseTableName="jhi_match"
+                                 constraintName="fk_jhi_match__guest_composition_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="composition"/>
+
+        <addForeignKeyConstraint baseColumnNames="best_player_id"
+                                 baseTableName="jhi_match"
+                                 constraintName="fk_jhi_match__best_player_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="player"/>
+
+        <addForeignKeyConstraint baseColumnNames="league_id"
+                                 baseTableName="jhi_match"
+                                 constraintName="fk_jhi_match__league_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="league"/>
+
+        <addForeignKeyConstraint baseColumnNames="cup_board_id"
+                                 baseTableName="jhi_match"
+                                 constraintName="fk_jhi_match__cup_board_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cup_board"/>
+    </changeSet>
+</databaseChangeLog>

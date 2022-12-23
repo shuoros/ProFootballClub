@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "privateChat": {
+      "home": {
+        "title": "Private Chats",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Private Chat erstellen",
+        "createOrEditLabel": "Private Chat erstellen oder bearbeiten",
+        "notFound": "Keine Private Chats gefunden"
+      },
+      "created": "Private Chat erstellt mit ID {{ param }}",
+      "updated": "Private Chat aktualisiert mit ID {{ param }}",
+      "deleted": "Private Chat gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Private Chat {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Private Chat"
+      },
+      "id": "Id",
+      "league": "League",
+      "cup": "Cup",
+      "message": "Message"
+    }
+  }
+}

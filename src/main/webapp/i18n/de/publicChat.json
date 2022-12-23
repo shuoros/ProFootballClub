@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "publicChat": {
+      "home": {
+        "title": "Public Chats",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Public Chat erstellen",
+        "createOrEditLabel": "Public Chat erstellen oder bearbeiten",
+        "notFound": "Keine Public Chats gefunden"
+      },
+      "created": "Public Chat erstellt mit ID {{ param }}",
+      "updated": "Public Chat aktualisiert mit ID {{ param }}",
+      "deleted": "Public Chat gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Public Chat {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Public Chat"
+      },
+      "id": "Id",
+      "from": "From",
+      "tu": "Tu",
+      "message": "Message"
+    }
+  }
+}

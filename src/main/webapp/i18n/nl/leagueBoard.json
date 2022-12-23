@@ -1,0 +1,31 @@
+{
+  "proFootballClubApp": {
+    "leagueBoard": {
+      "home": {
+        "title": "League Boards",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe League Board",
+        "createOrEditLabel": "Maak of wijzig een League Board",
+        "notFound": "No League Boards found"
+      },
+      "created": "A new League Board is created with identifier {{ param }}",
+      "updated": "A League Board is updated with identifier {{ param }}",
+      "deleted": "A League Board is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u League Board {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "League Board"
+      },
+      "id": "Id",
+      "position": "Position",
+      "win": "Win",
+      "lose": "Lose",
+      "draw": "Draw",
+      "goalDifference": "Goal Difference",
+      "points": "Points",
+      "team": "Team",
+      "league": "League"
+    }
+  }
+}

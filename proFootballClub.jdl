@@ -1,0 +1,440 @@
+// User last_login Instant update with each jwt request
+enum Gender {
+    DIVERSE
+    MALE
+    FEMALE
+}
+
+enum Country {
+    MULTY_CULTI
+    UK
+    US
+    DE
+    IR
+}
+
+enum Language {
+    EN
+    DE
+    FA
+}
+
+enum NameType {
+    FIRST_NAME
+    LAST_NAME
+}
+
+enum Plan {
+    SIMPLE
+    PREMIUM
+}
+
+enum PlayerStatus {
+    NOT_READY
+    READY
+}
+
+enum Vehicle {
+    BUS
+    TRAIN
+    PLANE
+    CRUISE
+}
+
+enum Field {
+    CLAY
+    GRASS
+    BEACH
+}
+
+enum Light {
+    NO_LIGHT
+    LAMP
+    PROJECTOR
+    LED
+}
+
+enum Chair {
+    WOODEN
+    CONCRETE
+    PLASTIC
+    CARBON
+}
+
+enum Assistant {
+    NO_ASSISTANT
+    TRAINEE
+    CERTIFIED
+    PRO
+}
+
+enum BodyBuilding {
+    NO_BODYBUILDING
+    PARK
+    PUBLIC
+    PRIVATE
+    PRIVATE_PLUS
+}
+
+enum Doctor {
+    NO_DOCTOR
+    PUBLIC_CLINIC
+    PUBLIC_HOSPITAL
+    PRIVATE_CLINIC
+    PRIVATE_HOSPITAL
+}
+
+enum Post {
+    GK
+    SW
+    LB
+    LCB
+    CB
+    RCB
+    RB
+    LWB
+    LDM
+    CDM
+    RDM
+    RWB
+    LM
+    LCM
+    CM
+    RCM
+    RM
+    LAM
+    CAM
+    RAM
+    LW
+    SS
+    RW
+    LS
+    CF
+    RS
+}
+
+enum Weather {
+    SUNNY
+    PARTLY_CLOUDY
+    CLOUDY
+    RAINY
+    WINDY
+    STORMY
+    TORNADO
+    FOGGY
+    HAILY
+}
+
+enum Arrange {
+    A235
+    A442
+    A451
+    A433
+    A442
+    A352
+    A4231
+    A4141
+    A4411
+    A343
+    A3331
+    A4312
+    A4222
+}
+
+enum Strategy {
+    GET_SCORE
+    NOT_GIVE_SCORE
+    COUNTER_ATTACK
+    KILL_TIME
+}
+
+enum Training {
+    GOALKEEPING
+    PENALTY_DEFENCE
+    DEFENCE
+    TACKLING
+    BALL_KEEPING
+    TEAMWORK
+    PASS
+    CORNER_KICK
+    FREE_KICK
+    PENALTY_KICK
+    GOAL
+    TECHNIQUE
+}
+
+enum CupType {
+    T4
+    T8
+    T16
+    T32
+    T64
+    T128
+    T256
+    T521
+    T1024
+    T2048
+    T4096
+}
+
+enum MatchType {
+    FREE
+    FRIENDLY
+    LEAGUE
+    CUP
+}
+
+entity Admin {
+    id UUID
+    adminId String unique required
+    firstName String required
+    lastName String required
+}
+
+// Coach 1-* Team [1]
+entity Coach {
+    id UUID
+    name String required
+    banned Boolean required
+    abandoned Boolean required
+    subscribed Boolean required
+    plan Plan required
+}
+
+// Team 1-* Player [2]
+// Team 1-1 Stadium [3]
+// Team 1-* Composition [8]
+// Team 1-* Team(friends) [17]
+entity Team {
+    id UUID
+    name String required unique
+    homeland Country required
+    gender Gender required
+    money Long required
+    points Long required
+    matches Long required
+    trophies Long required
+    readiness Integer min(0) max(100) required
+    spirit Integer min(0) max(100) required
+    fans Integer required
+    fansSatisfaction Integer min(0) max(100)  required
+}
+
+entity Stadium {
+    id UUID
+    name String required
+    capacity Integer required
+    ticket Integer required
+    leader Instant
+    vehicle Vehicle
+    field Field
+    light Light
+    chair Chair
+    assistant Assistant
+    bodyBuilding BodyBuilding
+    doctor Doctor
+}
+
+entity Player {
+    id UUID
+    firstName String required
+    lastName String required
+    gender Gender required
+    country Country required
+    age Integer required
+    status PlayerStatus required
+    post Post required
+    totalPower Integer min(0) max(256) required
+    goalkeeping Integer min(0) max(100) required
+    defence Integer min(0) max(100) required
+    tackling Integer min(0) max(100) required
+    passing Integer min(0) max(100) required
+    teamSkill Integer min(0) max(100) required
+    ballSkill Integer min(0) max(100) required
+    shooting Integer min(0) max(100) required
+    longShooting Integer min(0) max(100) required
+    dribbling Integer min(0) max(100) required
+    technique Integer min(0) max(100) required
+    confidence Integer min(0) max(100) required
+}
+
+// Train 1-1 Player [12]
+entity Train {
+    id UUID
+    training Training
+    finishes Instant
+}
+
+// Match 1-1 Team(host) [7]
+// Match 1-1 Team(guest) [7]
+// Match 1-1 Composition(host) [9]
+// Match 1-1 Composition(guest) [9]
+// Match 1-1 Player(bestPlayer) [14]
+entity Match {
+    id UUID
+    date Instant required
+    weather Weather required
+    hostGoals Integer
+    guestGoals Integer
+    events String
+    type MatchType
+}
+
+// Composition 1-* PlayerArrange [18]
+// Composition 1-1 Player(capitan) [19]
+entity Composition {
+    id UUID
+    d3fault Boolean required
+    arrange Arrange required
+    strategy Strategy required
+    defence Integer min(0) max(100) required
+    shortPass Integer min(0) max(100) required
+    violence Integer min(0) max(100) required
+}
+
+// PlayerArrange 1-1 Player [20]
+entity PlayerArrange {
+    id UUID
+    post Post
+}
+
+// Transfer 1-1 Player [10]
+entity Transfer {
+    id UUID
+    price Long required
+    password String
+    bought Boolean
+}
+
+// League 1-* Match [11]
+// League 1-* LeagueBoard [13]
+// League 1-1 Player(goalScorer) [15]
+// League 1-1 NewsPaper [25]
+entity League {
+    id UUID
+    clazz Integer min(1) max(14) required
+    events String
+    finished Boolean
+    start Instant
+}
+
+// LeagueBoard 1-1 Team [16]
+entity LeagueBoard {
+    id UUID
+    position Integer min(1) max(8) required
+    win Integer
+    lose Integer
+    draw Integer
+    goalDifference Integer
+    points Integer
+}
+
+// Cup 1-* CupBoard [22]
+// Cup 1-1 Player(goalScorer) [23]
+// Cup 1-1 NewsPaper [26]
+entity Cup {
+    id UUID
+    type CupType required
+    events String
+    finished Boolean
+    entrance Integer required
+    start Instant
+}
+
+// CupBoard 1-* Match [24]
+entity CupBoard {
+    id UUID
+    level Integer min(1) max(12) required
+}
+
+entity NewsPaper {
+    id UUID
+    news String required
+}
+
+// FriendRequest 1-1 Team(from) [30]
+// FriendRequest 1-1 Team(to) [30]
+entity FriendRequest {
+    id UUID
+}
+
+// Ticket 1-* Message [27]
+// Ticket 1-1 Team [28]
+entity Ticket {
+    id UUID
+    subject String required
+}
+
+// PrivateChat 1-* Message [31]
+// PrivateChat 1-1 League [33]
+// PrivateChat 1-1 Cup [33]
+entity PrivateChat {
+    id UUID
+}
+
+// PublicChat 1-* Message [32]
+// PublicChat 1-1 Team(from) [34]
+// PublicChat 1-1 Team(to) [34]
+entity PublicChat {
+    id UUID
+}
+
+// Message 1-1 Team [29]
+entity Message {
+    id UUID
+    message String required
+}
+
+entity Variables {
+    id UUID
+    leagueFirstPlacePrize Integer
+    leagueSecondPlacePrize Integer
+}
+
+relationship OneToMany {
+    Coach to Team // [1]
+    Team to Player // [2]
+    Team to Composition // [8]
+    League{match} to Match // [11]
+    League to LeagueBoard // [13]
+    Team{friends} to Team // [17]
+    Composition{playerArranges} to PlayerArrange // [18]
+    Cup to CupBoard // [22]
+    CupBoard{match} to Match // [24]
+    Ticket{messages} to Message // [27]
+    PrivateChat{message} to Message // [31]
+    PublicChat{message} to Message // [32]
+}
+
+relationship OneToOne {
+    Admin to User // [0]
+    Coach to User // [0]
+    Team to Stadium // [3]
+    Match{host} to Team // [7]
+    Match{guest} to Team // [7]
+    Match{hostComposition} to Composition // [9]
+    Match{guestComposition} to Composition // [9]
+    Match{bestPlayer} to Player // [14]
+    Transfer{player} to Player // [10]
+    Train{player} to Player // [12]
+    League{goalScorer} to Player // [15]
+    LeagueBoard to Team // [16]
+    Composition{capitan} to Player // [19]
+    PlayerArrange{player} to Player // [20]
+    Cup{goalScorer} to Player // [23]
+    League to NewsPaper // [25]
+    Cup to NewsPaper // [26]
+    Ticket{coach} to Team // [28]
+    Message{coach} to Team // [29]
+    FriendRequest{from} to Team // [30]
+    FriendRequest{tu} to Team // [30]
+    PrivateChat{league} to League // [33]
+    PrivateChat{cup} to Cup // [33]
+    PublicChat{from} to Team // [34]
+    PublicChat{tu} to Team // [34]
+}
+
+
+//////////////////Other Configs////////////////////
+
+service * with serviceClass

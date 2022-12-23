@@ -1,0 +1,30 @@
+{
+  "proFootballClubApp": {
+    "coach": {
+      "home": {
+        "title": "Coaches",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Coach erstellen",
+        "createOrEditLabel": "Coach erstellen oder bearbeiten",
+        "notFound": "Keine Coaches gefunden"
+      },
+      "created": "Coach erstellt mit ID {{ param }}",
+      "updated": "Coach aktualisiert mit ID {{ param }}",
+      "deleted": "Coach gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Coach {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Coach"
+      },
+      "id": "Id",
+      "name": "Name",
+      "banned": "Banned",
+      "abandoned": "Abandoned",
+      "subscribed": "Subscribed",
+      "plan": "Plan",
+      "user": "User",
+      "team": "Team"
+    }
+  }
+}

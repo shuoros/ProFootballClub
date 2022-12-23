@@ -1,0 +1,36 @@
+{
+  "proFootballClubApp": {
+    "match": {
+      "home": {
+        "title": "Matches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Match",
+        "createOrEditLabel": "Maak of wijzig een Match",
+        "notFound": "No Matches found"
+      },
+      "created": "A new Match is created with identifier {{ param }}",
+      "updated": "A Match is updated with identifier {{ param }}",
+      "deleted": "A Match is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Match {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Match"
+      },
+      "id": "Id",
+      "date": "Date",
+      "weather": "Weather",
+      "hostGoals": "Host Goals",
+      "guestGoals": "Guest Goals",
+      "events": "Events",
+      "type": "Type",
+      "host": "Host",
+      "guest": "Guest",
+      "hostComposition": "Host Composition",
+      "guestComposition": "Guest Composition",
+      "bestPlayer": "Best Player",
+      "league": "League",
+      "cupBoard": "Cup Board"
+    }
+  }
+}

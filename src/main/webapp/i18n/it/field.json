@@ -1,0 +1,10 @@
+{
+  "proFootballClubApp": {
+    "Field": {
+      "null": "",
+      "CLAY": "CLAY",
+      "GRASS": "GRASS",
+      "BEACH": "BEACH"
+    }
+  }
+}

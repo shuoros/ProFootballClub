@@ -1,0 +1,9 @@
+export enum Strategy {
+  GET_SCORE = 'GET_SCORE',
+
+  NOT_GIVE_SCORE = 'NOT_GIVE_SCORE',
+
+  COUNTER_ATTACK = 'COUNTER_ATTACK',
+
+  KILL_TIME = 'KILL_TIME',
+}

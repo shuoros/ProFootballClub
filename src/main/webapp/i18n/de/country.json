@@ -1,0 +1,12 @@
+{
+  "proFootballClubApp": {
+    "Country": {
+      "null": "",
+      "MULTY_CULTI": "MULTY_CULTI",
+      "UK": "UK",
+      "US": "US",
+      "DE": "DE",
+      "IR": "IR"
+    }
+  }
+}

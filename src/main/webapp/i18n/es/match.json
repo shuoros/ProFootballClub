@@ -1,0 +1,36 @@
+{
+  "proFootballClubApp": {
+    "match": {
+      "home": {
+        "title": "Matches",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Match",
+        "createOrEditLabel": "Crear o editar Match",
+        "notFound": "Ningún Matches encontrado"
+      },
+      "created": "Un nuevo Match ha sido creado con el identificador {{ param }}",
+      "updated": "Un Match ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Match ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Match {{ id }}?"
+      },
+      "detail": {
+        "title": "Match"
+      },
+      "id": "Id",
+      "date": "Date",
+      "weather": "Weather",
+      "hostGoals": "Host Goals",
+      "guestGoals": "Guest Goals",
+      "events": "Events",
+      "type": "Type",
+      "host": "Host",
+      "guest": "Guest",
+      "hostComposition": "Host Composition",
+      "guestComposition": "Guest Composition",
+      "bestPlayer": "Best Player",
+      "league": "League",
+      "cupBoard": "Cup Board"
+    }
+  }
+}

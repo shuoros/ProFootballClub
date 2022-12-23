@@ -1,0 +1,82 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180026",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "stadium",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "capacity",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ticket",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "leader",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "vehicle",
+      "fieldType": "Vehicle",
+      "fieldValues": "BUS,TRAIN,PLANE,CRUISE"
+    },
+    {
+      "fieldName": "field",
+      "fieldType": "Field",
+      "fieldValues": "CLAY,GRASS,BEACH"
+    },
+    {
+      "fieldName": "light",
+      "fieldType": "Light",
+      "fieldValues": "NO_LIGHT,LAMP,PROJECTOR,LED"
+    },
+    {
+      "fieldName": "chair",
+      "fieldType": "Chair",
+      "fieldValues": "WOODEN,CONCRETE,PLASTIC,CARBON"
+    },
+    {
+      "fieldName": "assistant",
+      "fieldType": "Assistant",
+      "fieldValues": "NO_ASSISTANT,TRAINEE,CERTIFIED,PRO"
+    },
+    {
+      "fieldName": "bodyBuilding",
+      "fieldType": "BodyBuilding",
+      "fieldValues": "NO_BODYBUILDING,PARK,PUBLIC,PRIVATE,PRIVATE_PLUS"
+    },
+    {
+      "fieldName": "doctor",
+      "fieldType": "Doctor",
+      "fieldValues": "NO_DOCTOR,PUBLIC_CLINIC,PUBLIC_HOSPITAL,PRIVATE_CLINIC,PRIVATE_HOSPITAL"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Stadium",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "stadium",
+      "ownerSide": false,
+      "relationshipName": "team",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

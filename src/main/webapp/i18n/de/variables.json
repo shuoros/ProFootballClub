@@ -1,0 +1,25 @@
+{
+  "proFootballClubApp": {
+    "variables": {
+      "home": {
+        "title": "Variables",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Variables erstellen",
+        "createOrEditLabel": "Variables erstellen oder bearbeiten",
+        "notFound": "Keine Variables gefunden"
+      },
+      "created": "Variables erstellt mit ID {{ param }}",
+      "updated": "Variables aktualisiert mit ID {{ param }}",
+      "deleted": "Variables gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Variables {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Variables"
+      },
+      "id": "Id",
+      "leagueFirstPlacePrize": "League First Place Prize",
+      "leagueSecondPlacePrize": "League Second Place Prize"
+    }
+  }
+}

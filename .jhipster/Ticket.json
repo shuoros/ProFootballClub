@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180039",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "ticket",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "subject",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Ticket",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "ownerSide": true,
+      "relationshipName": "coach",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "message",
+      "otherEntityRelationshipName": "ticket",
+      "relationshipName": "messages",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

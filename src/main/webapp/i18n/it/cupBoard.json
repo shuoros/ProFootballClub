@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "cupBoard": {
+      "home": {
+        "title": "CupBoards",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Cup Board",
+        "createOrEditLabel": "Genera o modifica un Cup Board",
+        "notFound": "No Cup Boards found"
+      },
+      "created": "&Egrave; stato generato un nuovo Cup Board con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Cup Board identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Cup Board con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Cup Board {{ id }}?"
+      },
+      "detail": {
+        "title": "Cup Board"
+      },
+      "id": "Id",
+      "level": "Level",
+      "match": "Match",
+      "cup": "Cup"
+    }
+  }
+}

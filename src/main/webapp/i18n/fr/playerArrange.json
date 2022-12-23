@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "playerArrange": {
+      "home": {
+        "title": "PlayerArranges",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Player Arrange",
+        "createOrEditLabel": "Créer ou éditer un Player Arrange",
+        "notFound": "Aucun Player Arrange trouvé"
+      },
+      "created": "Un nouveau Player Arrange a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Player Arrange avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Player Arrange avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Player Arrange {{ id }} ?"
+      },
+      "detail": {
+        "title": "Player Arrange"
+      },
+      "id": "Id",
+      "post": "Post",
+      "player": "Player",
+      "composition": "Composition"
+    }
+  }
+}

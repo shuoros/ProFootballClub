@@ -1,0 +1,10 @@
+{
+  "proFootballClubApp": {
+    "Gender": {
+      "null": "",
+      "DIVERSE": "DIVERSE",
+      "MALE": "MALE",
+      "FEMALE": "FEMALE"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180029",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "jhi_match",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "weather",
+      "fieldType": "Weather",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "SUNNY,PARTLY_CLOUDY,CLOUDY,RAINY,WINDY,STORMY,TORNADO,FOGGY,HAILY"
+    },
+    {
+      "fieldName": "hostGoals",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "guestGoals",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "events",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "MatchType",
+      "fieldValues": "FREE,FRIENDLY,LEAGUE,CUP"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Match",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "ownerSide": true,
+      "relationshipName": "host",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "team",
+      "ownerSide": true,
+      "relationshipName": "guest",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "composition",
+      "ownerSide": true,
+      "relationshipName": "hostComposition",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "composition",
+      "ownerSide": true,
+      "relationshipName": "guestComposition",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "player",
+      "ownerSide": true,
+      "relationshipName": "bestPlayer",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "league",
+      "otherEntityRelationshipName": "match",
+      "relationshipName": "league",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cupBoard",
+      "otherEntityRelationshipName": "match",
+      "relationshipName": "cupBoard",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

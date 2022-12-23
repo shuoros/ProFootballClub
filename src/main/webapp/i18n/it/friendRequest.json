@@ -1,0 +1,25 @@
+{
+  "proFootballClubApp": {
+    "friendRequest": {
+      "home": {
+        "title": "FriendRequests",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Friend Request",
+        "createOrEditLabel": "Genera o modifica un Friend Request",
+        "notFound": "No Friend Requests found"
+      },
+      "created": "&Egrave; stato generato un nuovo Friend Request con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Friend Request identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Friend Request con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Friend Request {{ id }}?"
+      },
+      "detail": {
+        "title": "Friend Request"
+      },
+      "id": "Id",
+      "from": "From",
+      "tu": "Tu"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "proFootballClubApp": {
+    "Chair": {
+      "null": "",
+      "WOODEN": "WOODEN",
+      "CONCRETE": "CONCRETE",
+      "PLASTIC": "PLASTIC",
+      "CARBON": "CARBON"
+    }
+  }
+}

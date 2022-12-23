@@ -1,0 +1,63 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180035",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "cup",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "CupType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "T4,T8,T16,T32,T64,T128,T256,T521,T1024,T2048,T4096"
+    },
+    {
+      "fieldName": "events",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "finished",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "entrance",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "start",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Cup",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "player",
+      "ownerSide": true,
+      "relationshipName": "goalScorer",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "newsPaper",
+      "otherEntityRelationshipName": "cup",
+      "ownerSide": true,
+      "relationshipName": "newsPaper",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "cupBoard",
+      "otherEntityRelationshipName": "cup",
+      "relationshipName": "cupBoard",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

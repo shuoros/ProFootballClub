@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180038",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "friend_request",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "FriendRequest",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "ownerSide": true,
+      "relationshipName": "from",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "team",
+      "ownerSide": true,
+      "relationshipName": "tu",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

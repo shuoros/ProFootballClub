@@ -1,0 +1,43 @@
+{
+  "proFootballClubApp": {
+    "player": {
+      "home": {
+        "title": "Players",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Player",
+        "createOrEditLabel": "Create or edit a Player",
+        "notFound": "No Players found"
+      },
+      "created": "A new Player is created with identifier {{ param }}",
+      "updated": "A Player is updated with identifier {{ param }}",
+      "deleted": "A Player is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Player {{ id }}?"
+      },
+      "detail": {
+        "title": "Player"
+      },
+      "id": "Id",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "gender": "Gender",
+      "country": "Country",
+      "age": "Age",
+      "status": "Status",
+      "post": "Post",
+      "totalPower": "Total Power",
+      "goalkeeping": "Goalkeeping",
+      "defence": "Defence",
+      "tackling": "Tackling",
+      "passing": "Passing",
+      "teamSkill": "Team Skill",
+      "ballSkill": "Ball Skill",
+      "shooting": "Shooting",
+      "longShooting": "Long Shooting",
+      "dribbling": "Dribbling",
+      "technique": "Technique",
+      "confidence": "Confidence",
+      "team": "Team"
+    }
+  }
+}

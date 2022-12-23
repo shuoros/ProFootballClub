@@ -1,0 +1,50 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180042",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "message",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Message",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "ownerSide": true,
+      "relationshipName": "coach",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "ticket",
+      "otherEntityRelationshipName": "messages",
+      "relationshipName": "ticket",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "privateChat",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "privateChat",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "publicChat",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "publicChat",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

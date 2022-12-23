@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180043",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "variables",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "leagueFirstPlacePrize",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "leagueSecondPlacePrize",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Variables",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

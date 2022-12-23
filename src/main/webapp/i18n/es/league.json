@@ -1,0 +1,31 @@
+{
+  "proFootballClubApp": {
+    "league": {
+      "home": {
+        "title": "Leagues",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo League",
+        "createOrEditLabel": "Crear o editar League",
+        "notFound": "Ningún Leagues encontrado"
+      },
+      "created": "Un nuevo League ha sido creado con el identificador {{ param }}",
+      "updated": "Un League ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un League ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar League {{ id }}?"
+      },
+      "detail": {
+        "title": "League"
+      },
+      "id": "Id",
+      "clazz": "Clazz",
+      "events": "Events",
+      "finished": "Finished",
+      "start": "Start",
+      "goalScorer": "Goal Scorer",
+      "newsPaper": "News Paper",
+      "match": "Match",
+      "leagueBoard": "League Board"
+    }
+  }
+}

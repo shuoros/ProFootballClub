@@ -1,0 +1,35 @@
+{
+  "proFootballClubApp": {
+    "stadium": {
+      "home": {
+        "title": "Stadiums",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Stadium",
+        "createOrEditLabel": "Maak of wijzig een Stadium",
+        "notFound": "No Stadiums found"
+      },
+      "created": "A new Stadium is created with identifier {{ param }}",
+      "updated": "A Stadium is updated with identifier {{ param }}",
+      "deleted": "A Stadium is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Stadium {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Stadium"
+      },
+      "id": "Id",
+      "name": "Name",
+      "capacity": "Capacity",
+      "ticket": "Ticket",
+      "leader": "Leader",
+      "vehicle": "Vehicle",
+      "field": "Field",
+      "light": "Light",
+      "chair": "Chair",
+      "assistant": "Assistant",
+      "bodyBuilding": "Body Building",
+      "doctor": "Doctor",
+      "team": "Team"
+    }
+  }
+}

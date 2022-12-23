@@ -1,0 +1,11 @@
+id;first_name;last_name;gender;country;age;status;post;total_power;goalkeeping;defence;tackling;passing;team_skill;ball_skill;shooting;long_shooting;dribbling;technique;confidence
+b8697840-1edf-4069-95dc-7683cf0bd803;Sean;Koch;MALE;DE;35899;READY;LB;86;9;15;78;5;23;17;59;15;74;57;14
+98504b8b-daec-45dc-85e6-3f6958949e11;Brent;Watsica;DIVERSE;MULTY_CULTI;64148;READY;RAM;0;28;71;65;69;87;13;63;36;15;92;72
+d742d56c-e2ed-46d5-b87e-7ea3616b06cf;Eva;Ratke;DIVERSE;US;4979;READY;GK;112;52;22;45;40;95;67;50;20;63;54;23
+7c281d4d-34f1-4c7a-8205-7c7b82311ffe;Jenifer;Jones;FEMALE;DE;67506;READY;LDM;57;0;75;79;83;8;45;7;50;59;86;66
+4c053c92-a0ea-43c9-bab7-4f2634eea4da;Charity;Vandervort;FEMALE;DE;82008;READY;CM;135;7;60;53;95;3;42;17;30;30;96;84
+32c5f3a6-94ef-4b4c-a7ad-61f4cefba03f;Theresa;Mayert;FEMALE;UK;66096;READY;CF;134;39;48;13;78;6;95;39;33;76;42;57
+e0d9ef62-7624-4a48-b28a-cdcba3e6ccf1;Maximilian;Heller;DIVERSE;UK;5667;NOT_READY;RAM;63;73;82;44;54;68;79;4;98;69;78;7
+1fd8693d-1ed5-4729-bfb3-344e301c369c;Hillard;Haag;DIVERSE;MULTY_CULTI;98273;NOT_READY;RAM;198;54;97;61;29;69;61;27;85;71;98;83
+abbf79d3-a4c8-4c8d-a71c-722bc51387b4;Nettie;Tillman;MALE;UK;29986;NOT_READY;RW;33;31;73;32;26;53;23;11;49;0;27;20
+b2be127c-a49e-4a16-b05b-072402592061;Kelsi;Roberts;FEMALE;DE;17862;NOT_READY;CF;150;18;0;87;64;18;99;16;32;14;51;1

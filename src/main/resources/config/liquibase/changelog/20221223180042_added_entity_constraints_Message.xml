@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Message.
+    -->
+    <changeSet id="20221223180042-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="coach_id"
+                                 baseTableName="message"
+                                 constraintName="fk_message__coach_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="team"/>
+
+        <addForeignKeyConstraint baseColumnNames="ticket_id"
+                                 baseTableName="message"
+                                 constraintName="fk_message__ticket_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ticket"/>
+
+        <addForeignKeyConstraint baseColumnNames="private_chat_id"
+                                 baseTableName="message"
+                                 constraintName="fk_message__private_chat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="private_chat"/>
+
+        <addForeignKeyConstraint baseColumnNames="public_chat_id"
+                                 baseTableName="message"
+                                 constraintName="fk_message__public_chat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="public_chat"/>
+    </changeSet>
+</databaseChangeLog>

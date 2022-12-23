@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180031",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "player_arrange",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "post",
+      "fieldType": "Post",
+      "fieldValues": "GK,SW,LB,LCB,CB,RCB,RB,LWB,LDM,CDM,RDM,RWB,LM,LCM,CM,RCM,RM,LAM,CAM,RAM,LW,SS,RW,LS,CF,RS"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PlayerArrange",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "player",
+      "ownerSide": true,
+      "relationshipName": "player",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "composition",
+      "otherEntityRelationshipName": "playerArranges",
+      "relationshipName": "composition",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

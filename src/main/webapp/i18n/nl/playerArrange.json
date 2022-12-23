@@ -1,0 +1,26 @@
+{
+  "proFootballClubApp": {
+    "playerArrange": {
+      "home": {
+        "title": "Player Arranges",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Maak een nieuwe Player Arrange",
+        "createOrEditLabel": "Maak of wijzig een Player Arrange",
+        "notFound": "No Player Arranges found"
+      },
+      "created": "A new Player Arrange is created with identifier {{ param }}",
+      "updated": "A Player Arrange is updated with identifier {{ param }}",
+      "deleted": "A Player Arrange is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Bent u zeker dat u Player Arrange {{ id }} wilt verwijderen?"
+      },
+      "detail": {
+        "title": "Player Arrange"
+      },
+      "id": "Id",
+      "post": "Post",
+      "player": "Player",
+      "composition": "Composition"
+    }
+  }
+}

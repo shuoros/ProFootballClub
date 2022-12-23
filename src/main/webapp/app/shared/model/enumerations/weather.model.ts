@@ -1,0 +1,19 @@
+export enum Weather {
+  SUNNY = 'SUNNY',
+
+  PARTLY_CLOUDY = 'PARTLY_CLOUDY',
+
+  CLOUDY = 'CLOUDY',
+
+  RAINY = 'RAINY',
+
+  WINDY = 'WINDY',
+
+  STORMY = 'STORMY',
+
+  TORNADO = 'TORNADO',
+
+  FOGGY = 'FOGGY',
+
+  HAILY = 'HAILY',
+}

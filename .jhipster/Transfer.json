@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223180032",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "transfer",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bought",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Transfer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "player",
+      "ownerSide": true,
+      "relationshipName": "player",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

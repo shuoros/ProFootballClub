@@ -3,8 +3,11 @@ package club.profb.service.dto;
 import club.profb.config.Constants;
 import club.profb.domain.Authority;
 import club.profb.domain.User;
+import club.profb.domain.enumeration.Language;
+
 import java.time.Instant;
 import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 import javax.validation.constraints.*;
 
@@ -13,7 +16,7 @@ import javax.validation.constraints.*;
  */
 public class AdminUserDTO {
 
-    private Long id;
+    private UUID id;
 
     @NotBlank
     @Pattern(regexp = Constants.LOGIN_REGEX)
@@ -36,7 +39,7 @@ public class AdminUserDTO {
     private boolean activated = false;
 
     @Size(min = 2, max = 10)
-    private String langKey;
+    private Language langKey;
 
     private String createdBy;
 
@@ -68,11 +71,11 @@ public class AdminUserDTO {
         this.authorities = user.getAuthorities().stream().map(Authority::getName).collect(Collectors.toSet());
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -124,11 +127,11 @@ public class AdminUserDTO {
         this.activated = activated;
     }
 
-    public String getLangKey() {
+    public Language getLangKey() {
         return langKey;
     }
 
-    public void setLangKey(String langKey) {
+    public void setLangKey(Language langKey) {
         this.langKey = langKey;
     }
 

@@ -62,12 +62,6 @@ public class AdminService {
                 if (admin.getAdminId() != null) {
                     existingAdmin.setAdminId(admin.getAdminId());
                 }
-                if (admin.getFirstName() != null) {
-                    existingAdmin.setFirstName(admin.getFirstName());
-                }
-                if (admin.getLastName() != null) {
-                    existingAdmin.setLastName(admin.getLastName());
-                }
 
                 return existingAdmin;
             })

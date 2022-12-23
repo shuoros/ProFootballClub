@@ -25,14 +25,6 @@ public class Admin implements Serializable {
     @Column(name = "admin_id", nullable = false, unique = true)
     private String adminId;
 
-    @NotNull
-    @Column(name = "first_name", nullable = false)
-    private String firstName;
-
-    @NotNull
-    @Column(name = "last_name", nullable = false)
-    private String lastName;
-
     @OneToOne
     @JoinColumn(unique = true)
     private User user;
@@ -63,32 +55,6 @@ public class Admin implements Serializable {
 
     public void setAdminId(String adminId) {
         this.adminId = adminId;
-    }
-
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    public Admin firstName(String firstName) {
-        this.setFirstName(firstName);
-        return this;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    public Admin lastName(String lastName) {
-        this.setLastName(lastName);
-        return this;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public User getUser() {
@@ -129,8 +95,6 @@ public class Admin implements Serializable {
         return "Admin{" +
             "id=" + getId() +
             ", adminId='" + getAdminId() + "'" +
-            ", firstName='" + getFirstName() + "'" +
-            ", lastName='" + getLastName() + "'" +
             "}";
     }
 }

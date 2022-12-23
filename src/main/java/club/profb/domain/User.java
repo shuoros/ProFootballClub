@@ -1,12 +1,14 @@
 package club.profb.domain;
 
 import club.profb.config.Constants;
+import club.profb.domain.enumeration.Language;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
+import java.util.UUID;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
@@ -14,6 +16,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.Type;
 
 /**
  * A user.
@@ -25,8 +28,10 @@ public class User extends AbstractAuditingEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue
+    @Type(type = "uuid-char")
+    @Column(name = "id", length = 36)
+    private UUID id;
 
     @NotNull
     @Pattern(regexp = Constants.LOGIN_REGEX)
@@ -59,7 +64,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     @Size(min = 2, max = 10)
     @Column(name = "lang_key", length = 10)
-    private String langKey;
+    private Language langKey;
 
     @Size(max = 256)
     @Column(name = "image_url", length = 256)
@@ -88,11 +93,11 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @BatchSize(size = 20)
     private Set<Authority> authorities = new HashSet<>();
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -177,11 +182,11 @@ public class User extends AbstractAuditingEntity implements Serializable {
         this.resetDate = resetDate;
     }
 
-    public String getLangKey() {
+    public Language getLangKey() {
         return langKey;
     }
 
-    public void setLangKey(String langKey) {
+    public void setLangKey(Language langKey) {
         this.langKey = langKey;
     }
 

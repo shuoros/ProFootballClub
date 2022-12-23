@@ -3,6 +3,7 @@ package club.profb.service;
 import club.profb.config.Constants;
 import club.profb.domain.Authority;
 import club.profb.domain.User;
+import club.profb.domain.enumeration.Language;
 import club.profb.repository.AuthorityRepository;
 import club.profb.repository.UserRepository;
 import club.profb.security.AuthoritiesConstants;
@@ -237,7 +238,7 @@ public class UserService {
      * @param langKey   language key.
      * @param imageUrl  image URL of user.
      */
-    public void updateUser(String firstName, String lastName, String email, String langKey, String imageUrl) {
+    public void updateUser(String firstName, String lastName, String email, Language langKey, String imageUrl) {
         SecurityUtils
             .getCurrentUserLogin()
             .flatMap(userRepository::findOneByLogin)
